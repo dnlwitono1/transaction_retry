@@ -4,7 +4,7 @@ source "http://rubygems.org"
 gemspec
 
 group :test do
-  gem 'transaction_isolation', git: 'https://github.com/alittlebit/transaction_isolation'
+  gem 'transaction_isolation', git: 'https://github.com/dnlwitono1/transaction_isolation'
   # Use the gem instead of a dated version bundled with Ruby
   gem 'minitest', '5.3.4'
   
@@ -16,7 +16,7 @@ group :test do
 end
 
 group :development do
-  gem 'transaction_isolation', git: 'https://github.com/alittlebit/transaction_isolation'
+  gem 'transaction_isolation', git: 'https://github.com/dnlwitono1/transaction_isolation'
   gem 'rake'
   # enhance irb
   gem 'awesome_print', :require => false
