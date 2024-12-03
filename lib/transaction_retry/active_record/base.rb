@@ -30,7 +30,7 @@ module TransactionRetry
 
           begin
             transaction_without_retry(**objects, &block)
-          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on]
+          rescue *[::ActiveRecord::TransactionIsolationConflict, ::ActiveRecord::SerializationFailure, *retry_on]
             raise if retry_count >= max_retries
             raise if tr_in_nested_transaction?
             
